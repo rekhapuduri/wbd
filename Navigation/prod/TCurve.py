@@ -68,10 +68,9 @@ class TCurve(object):
         s = 4      # 4 slices// you may start from more
         while (abs((simpsonNew - simpsonOld)/ simpsonNew) > epsilon):
             simpsonOld = simpsonNew
-            w=t/s #t is higher bound and lower bound is 0
+            w= t/s #t is higher bound and lower bound is 0
             sum2=0.0
             S1=self.f(0,self.n)+self.f(t,self.n) 
-            
             for i in range(1,s-1):
                 mod=i%2 #which is used to divide 2 and 4 multiples
                 x=self.f(float(i*w),self.n)
@@ -84,8 +83,6 @@ class TCurve(object):
             s = s * 2
         return simpsonNew  
         
-        
     
-        
             
         
