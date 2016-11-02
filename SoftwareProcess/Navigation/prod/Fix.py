@@ -9,6 +9,7 @@ from os.path import normpath, join
 from os import path
 
 
+
 class Fix():
     def __init__(self, logFile="log.txt"):
         """
